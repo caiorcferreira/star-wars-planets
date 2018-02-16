@@ -4,6 +4,14 @@ import { Provider } from "react-redux";
 
 import "../node_modules/normalize.css/normalize.css";
 
-import App from "./components/app";
+import configureStore from "./store/configureStore";
+import App from "./components/app.component";
 
-ReactDOM.render(<App />, document.getElementById("app"));
+const store = configureStore();
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById("app")
+);
