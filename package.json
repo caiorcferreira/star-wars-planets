@@ -40,6 +40,7 @@
     "react-redux": "5.0.5",
     "react-test-renderer": "16.0.0",
     "redux": "3.7.2",
+    "redux-thunk": "^2.2.0",
     "sass-loader": "6.0.6",
     "style-loader": "0.18.2",
     "webpack": "3.1.0"
@@ -48,9 +49,20 @@
     "transform": {
       "^.+\\.js(x?)$": "<rootDir>/node_modules/babel-jest"
     },
-    "snapshotSerializers": ["enzyme-to-json/serializer"],
-    "setupFiles": ["raf/polyfill", "<rootDir>/src/tests/setupTests.js"],
-    "moduleFileExtensions": ["js", "jsx"],
-    "moduleDirectories": ["node_modules", "bower_components"]
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "setupFiles": [
+      "raf/polyfill",
+      "<rootDir>/src/tests/setupTests.js"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "bower_components"
+    ]
   }
 }
