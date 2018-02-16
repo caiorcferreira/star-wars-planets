@@ -1,3 +1,5 @@
+import "babel-polyfill";
+import "isomorphic-fetch";
 import Enzyme from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 
