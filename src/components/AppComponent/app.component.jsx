@@ -1,8 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { fetchPlanet } from "../../actions/planets.actions";
 import "./app.component.scss";
+import { fetchPlanet } from "../../actions/planets.actions";
 
 import Loader from "../Loader/loader.component";
 
@@ -15,6 +15,7 @@ export class App extends React.Component {
     const { data, loading, error } = this.props.planet;
     return (
       <main className="container">
+        <h1 className="title">Star Wars Planets</h1>
         <div className={"box" + (loading ? " center" : "")}>
           {error && <p>{error}</p>}
           {loading ? (
@@ -22,7 +23,7 @@ export class App extends React.Component {
           ) : (
             <div>
               <div className="planet-info">
-                <h1 className="planet-info__name">{data.name}</h1>
+                <h2 className="planet-info__name">{data.name}</h2>
                 <hr />
                 <p className="planet-info__population">
                   Population: <span>{data.population}</span>

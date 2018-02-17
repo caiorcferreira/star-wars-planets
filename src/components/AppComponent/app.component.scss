@@ -1,9 +1,18 @@
+$primary: darken($color: #ffd700, $amount: 5%);
+
 .container {
   align-items: center;
   display: flex;
   justify-content: center;
   flex-direction: column;
   height: 100vh;
+}
+
+.title {
+  color: $primary;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 5rem;
 }
 
 .box {
@@ -21,7 +30,6 @@
 }
 
 .planet-info {
-  $primary: darken($color: #ffd700, $amount: 5%);
   @mixin planet-data() {
     color: $primary;
     font-size: 2rem;
