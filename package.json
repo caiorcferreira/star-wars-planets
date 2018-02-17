@@ -54,22 +54,12 @@
   },
   "jest": {
     "transform": {
-      "^.+\\.js(x?)$": "<rootDir>/node_modules/babel-jest"
+      "^.+\\.js(x?)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.scss$": "<rootDir>/node_modules/jest-css-modules"
     },
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ],
-    "setupFiles": [
-      "raf/polyfill",
-      "<rootDir>/src/tests/setupJest.js"
-    ],
-    "moduleFileExtensions": [
-      "js",
-      "jsx"
-    ],
-    "moduleDirectories": [
-      "node_modules",
-      "bower_components"
-    ]
+    "snapshotSerializers": ["enzyme-to-json/serializer"],
+    "setupFiles": ["raf/polyfill", "<rootDir>/src/tests/setupJest.js"],
+    "moduleFileExtensions": ["js", "jsx"],
+    "moduleDirectories": ["node_modules", "bower_components"]
   }
 }
