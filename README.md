@@ -1,5 +1,7 @@
 # Star Wars Planets
 
+You can find the live application [here](https://caiorcferreira-starwarsplanets.herokuapp.com/)
+
 ## Setup and Executation
 
 * yarn install
