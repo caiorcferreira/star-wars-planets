@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import { App } from "./app.component";
 
-import { planetFixture } from "../tests/fixture/planet.fixture";
+import { planetFixture } from "../../tests/fixture/planet.fixture";
 
 describe("Application component", () => {
   let fetchPlanet, planet;
