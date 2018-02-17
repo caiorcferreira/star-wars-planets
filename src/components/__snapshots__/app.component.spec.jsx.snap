@@ -22,15 +22,70 @@ exports[`Application component should render component with planet 1`] = `
         </span>
       </p>
       <p>
-        Climate: 
+        Climate:
+         
         <span>
-          arid
+          Arid
         </span>
       </p>
       <p>
-        Terrain: 
+        Terrain:
+         
         <span>
-          desert
+          Desert
+        </span>
+      </p>
+      <p>
+        Featured In 
+        <span>
+          5
+        </span>
+         films
+      </p>
+    </div>
+    <button
+      onClick={
+        [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+        }
+      }
+    >
+      Next
+    </button>
+  </div>
+</main>
+`;
+
+exports[`Application component should render error 1`] = `
+<main>
+  <p>
+    Not found
+  </p>
+  <div>
+    <div>
+      <h1>
+        Tatooine
+      </h1>
+      <p>
+        Population: 
+        <span>
+          200000
+        </span>
+      </p>
+      <p>
+        Climate:
+         
+        <span>
+          Arid
+        </span>
+      </p>
+      <p>
+        Terrain:
+         
+        <span>
+          Desert
         </span>
       </p>
       <p>

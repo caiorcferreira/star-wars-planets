@@ -9,9 +9,10 @@ export class App extends React.Component {
   }
 
   render() {
-    const { data, loading } = this.props.planet;
+    const { data, loading, error } = this.props.planet;
     return (
       <main>
+        {error && <p>{error}</p>}
         {loading ? (
           <p>Loading...</p>
         ) : (

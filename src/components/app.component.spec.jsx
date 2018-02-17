@@ -29,4 +29,15 @@ describe("Application component", () => {
 
     expect(wrapper).toMatchSnapshot();
   });
+
+  it("should render error", () => {
+    const wrapper = shallow(
+      <App
+        fetchPlanet={fetchPlanet}
+        planet={{ ...planet, error: "Not found" }}
+      />
+    );
+
+    expect(wrapper).toMatchSnapshot();
+  });
 });
