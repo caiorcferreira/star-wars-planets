@@ -10,6 +10,7 @@ $primary: darken($color: #ffd700, $amount: 5%);
 
 .title {
   color: $primary;
+  text-align: center;
   text-transform: uppercase;
   font-weight: 800;
   font-size: 5rem;
