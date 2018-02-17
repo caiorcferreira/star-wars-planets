@@ -4,26 +4,37 @@ import { connect } from "react-redux";
 import { fetchPlanet } from "../actions/planets.actions";
 
 export class App extends React.Component {
+  componentDidMount() {
+    this.props.fetchPlanet();
+  }
+
   render() {
+    const { data, loading } = this.props.planet;
     return (
       <main>
-        <div>
-          <h1>{this.props.planet.name}</h1>
-          <p>
-            Population: <span>{this.props.planet.population}</span>
-          </p>
-          <p>
-            Climate: <span>{this.props.planet.climate}</span>
-          </p>
-          <p>
-            Terrain: <span>{this.props.planet.terrain}</span>
-          </p>
-          <p>
-            Featured In <span>{this.props.planet.filmsFeatured}</span> films
-          </p>
-        </div>
+        {loading ? (
+          <p>Loading...</p>
+        ) : (
+          <div>
+            <div>
+              <h1>{data.name}</h1>
+              <p>
+                Population: <span>{data.population}</span>
+              </p>
+              <p>
+                Climate: <span>{data.climate}</span>
+              </p>
+              <p>
+                Terrain: <span>{data.terrain}</span>
+              </p>
+              <p>
+                Featured In <span>{data.filmsFeatured}</span> films
+              </p>
+            </div>
 
-        <button onClick={this.props.fetchPlanet}>Next</button>
+            <button onClick={this.props.fetchPlanet}>Next</button>
+          </div>
+        )}
       </main>
     );
   }
