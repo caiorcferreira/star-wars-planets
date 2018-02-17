@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
+import "./app.component.scss";
 import { fetchPlanet } from "../actions/planets.actions";
 
 export class App extends React.Component {
@@ -11,45 +12,55 @@ export class App extends React.Component {
   render() {
     const { data, loading, error } = this.props.planet;
     return (
-      <main>
-        {error && <p>{error}</p>}
-        {loading ? (
-          <p>Loading...</p>
-        ) : (
-          <div>
+      <main className="container">
+        <div className="box">
+          {error && <p>{error}</p>}
+          {loading ? (
+            <p>Loading...</p>
+          ) : (
             <div>
-              <h1>{data.name}</h1>
-              <p>
-                Population: <span>{data.population}</span>
-              </p>
-              <p>
-                Climate:{" "}
-                <span>
-                  {data.climate &&
-                    data.climate
-                      .split(",")
-                      .map(aClimate => capitalize(aClimate.trim()))
-                      .join(", ")}
-                </span>
-              </p>
-              <p>
-                Terrain:{" "}
-                <span>
-                  {data.terrain &&
-                    data.terrain
-                      .split(",")
-                      .map(aTerrain => capitalize(aTerrain.trim()))
-                      .join(", ")}
-                </span>
-              </p>
-              <p>
-                Featured In <span>{data.filmsFeatured}</span> films
-              </p>
-            </div>
+              <div className="planet-info">
+                <h1 className="planet-info__name">{data.name}</h1>
+                <hr />
+                <p className="planet-info__population">
+                  Population: <span>{data.population}</span>
+                </p>
+                <p className="planet-info__climate">
+                  Climate:{" "}
+                  <span>
+                    {data.climate &&
+                      data.climate
+                        .split(",")
+                        .map(aClimate => capitalize(aClimate.trim()))
+                        .join(", ")}
+                  </span>
+                </p>
+                <p className="planet-info__terrain">
+                  Terrain:{" "}
+                  <span>
+                    {data.terrain &&
+                      data.terrain
+                        .split(",")
+                        .map(aTerrain => capitalize(aTerrain.trim()))
+                        .join(", ")}
+                  </span>
+                </p>
+                <p className="planet-info__filmsFeatured">
+                  Featured In <span>{data.filmsFeatured}</span> films
+                </p>
+              </div>
 
-            <button onClick={this.props.fetchPlanet}>Next</button>
-          </div>
-        )}
+              <div className="center">
+                <button
+                  className="planet-info__button"
+                  onClick={this.props.fetchPlanet}
+                >
+                  Next
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
       </main>
     );
   }
