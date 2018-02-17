@@ -3,10 +3,10 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 
 import "../node_modules/normalize.css/normalize.css";
-import './styles/base.scss';
+import "./styles/base.scss";
 
 import configureStore from "./store/configureStore";
-import App from "./components/app.component";
+import App from "./components/AppComponent/app.component";
 
 const store = configureStore();
 

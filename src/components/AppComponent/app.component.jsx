@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 import "./app.component.scss";
-import { fetchPlanet } from "../actions/planets.actions";
+import { fetchPlanet } from "../../actions/planets.actions";
 
 export class App extends React.Component {
   componentDidMount() {
