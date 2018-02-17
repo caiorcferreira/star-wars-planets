@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Application component should render component loading 1`] = `
+<main>
+  <p>
+    Loading...
+  </p>
+</main>
+`;
+
+exports[`Application component should render component with planet 1`] = `
+<main>
+  <div>
+    <div>
+      <h1>
+        Tatooine
+      </h1>
+      <p>
+        Population: 
+        <span>
+          200000
+        </span>
+      </p>
+      <p>
+        Climate: 
+        <span>
+          arid
+        </span>
+      </p>
+      <p>
+        Terrain: 
+        <span>
+          desert
+        </span>
+      </p>
+      <p>
+        Featured In 
+        <span>
+          5
+        </span>
+         films
+      </p>
+    </div>
+    <button
+      onClick={
+        [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+        }
+      }
+    >
+      Next
+    </button>
+  </div>
+</main>
+`;
