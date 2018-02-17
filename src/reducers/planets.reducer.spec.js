@@ -1,17 +1,11 @@
 import planetsReducer from "./planets.reducer";
 
+import { planetFixture } from "../tests/fixture/planet.fixture";
+
 import {
   FETCH_PLANET_SUCCESS,
   FETCH_PLANET_BEGIN
 } from "../actions/planets.actions";
-
-const planetFixture = {
-  name: "Tatooine",
-  climate: "arid",
-  terrain: "desert",
-  population: 200000,
-  filmsFeatured: 5
-};
 
 describe("Planets Reducer", () => {
   it("should set planet data when fetch is successful", () => {
