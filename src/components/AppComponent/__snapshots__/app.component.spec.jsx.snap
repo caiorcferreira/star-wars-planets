@@ -1,112 +1,179 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Application component should render component loading 1`] = `
-<main>
-  <p>
-    Loading...
-  </p>
+<main
+  className="container"
+>
+  <h1
+    className="title"
+  >
+    Star Wars Planets
+  </h1>
+  <div
+    className="box center"
+  >
+    <Loader />
+  </div>
 </main>
 `;
 
 exports[`Application component should render component with planet 1`] = `
-<main>
-  <div>
+<main
+  className="container"
+>
+  <h1
+    className="title"
+  >
+    Star Wars Planets
+  </h1>
+  <div
+    className="box"
+  >
     <div>
-      <h1>
-        Tatooine
-      </h1>
-      <p>
-        Population: 
-        <span>
-          200000
-        </span>
-      </p>
-      <p>
-        Climate:
-         
-        <span>
-          Arid
-        </span>
-      </p>
-      <p>
-        Terrain:
-         
-        <span>
-          Desert
-        </span>
-      </p>
-      <p>
-        Featured In 
-        <span>
-          5
-        </span>
-         films
-      </p>
+      <div
+        className="planet-info"
+      >
+        <h2
+          className="planet-info__name"
+        >
+          Tatooine
+        </h2>
+        <hr />
+        <p
+          className="planet-info__population"
+        >
+          Population: 
+          <span>
+            200000
+          </span>
+        </p>
+        <p
+          className="planet-info__climate"
+        >
+          Climate:
+           
+          <span>
+            Arid
+          </span>
+        </p>
+        <p
+          className="planet-info__terrain"
+        >
+          Terrain:
+           
+          <span>
+            Desert
+          </span>
+        </p>
+        <p
+          className="planet-info__filmsFeatured"
+        >
+          Featured In 
+          <span>
+            5
+          </span>
+           films
+        </p>
+      </div>
+      <div
+        className="center"
+      >
+        <button
+          className="planet-info__button"
+          onClick={
+            [MockFunction] {
+              "calls": Array [
+                Array [],
+              ],
+            }
+          }
+        >
+          Next
+        </button>
+      </div>
     </div>
-    <button
-      onClick={
-        [MockFunction] {
-          "calls": Array [
-            Array [],
-          ],
-        }
-      }
-    >
-      Next
-    </button>
   </div>
 </main>
 `;
 
 exports[`Application component should render error 1`] = `
-<main>
-  <p>
-    Not found
-  </p>
-  <div>
+<main
+  className="container"
+>
+  <h1
+    className="title"
+  >
+    Star Wars Planets
+  </h1>
+  <div
+    className="box"
+  >
+    <p>
+      Not found
+    </p>
     <div>
-      <h1>
-        Tatooine
-      </h1>
-      <p>
-        Population: 
-        <span>
-          200000
-        </span>
-      </p>
-      <p>
-        Climate:
-         
-        <span>
-          Arid
-        </span>
-      </p>
-      <p>
-        Terrain:
-         
-        <span>
-          Desert
-        </span>
-      </p>
-      <p>
-        Featured In 
-        <span>
-          5
-        </span>
-         films
-      </p>
+      <div
+        className="planet-info"
+      >
+        <h2
+          className="planet-info__name"
+        >
+          Tatooine
+        </h2>
+        <hr />
+        <p
+          className="planet-info__population"
+        >
+          Population: 
+          <span>
+            200000
+          </span>
+        </p>
+        <p
+          className="planet-info__climate"
+        >
+          Climate:
+           
+          <span>
+            Arid
+          </span>
+        </p>
+        <p
+          className="planet-info__terrain"
+        >
+          Terrain:
+           
+          <span>
+            Desert
+          </span>
+        </p>
+        <p
+          className="planet-info__filmsFeatured"
+        >
+          Featured In 
+          <span>
+            5
+          </span>
+           films
+        </p>
+      </div>
+      <div
+        className="center"
+      >
+        <button
+          className="planet-info__button"
+          onClick={
+            [MockFunction] {
+              "calls": Array [
+                Array [],
+              ],
+            }
+          }
+        >
+          Next
+        </button>
+      </div>
     </div>
-    <button
-      onClick={
-        [MockFunction] {
-          "calls": Array [
-            Array [],
-          ],
-        }
-      }
-    >
-      Next
-    </button>
   </div>
 </main>
 `;
