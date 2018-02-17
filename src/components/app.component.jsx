@@ -22,10 +22,24 @@ export class App extends React.Component {
                 Population: <span>{data.population}</span>
               </p>
               <p>
-                Climate: <span>{data.climate}</span>
+                Climate:{" "}
+                <span>
+                  {data.climate &&
+                    data.climate
+                      .split(",")
+                      .map(aClimate => capitalize(aClimate.trim()))
+                      .join(", ")}
+                </span>
               </p>
               <p>
-                Terrain: <span>{data.terrain}</span>
+                Terrain:{" "}
+                <span>
+                  {data.terrain &&
+                    data.terrain
+                      .split(",")
+                      .map(aTerrain => capitalize(aTerrain.trim()))
+                      .join(", ")}
+                </span>
               </p>
               <p>
                 Featured In <span>{data.filmsFeatured}</span> films
@@ -39,6 +53,11 @@ export class App extends React.Component {
     );
   }
 }
+
+const capitalize = str => {
+  const [firstLetter, ...rest] = str;
+  return [firstLetter.toUpperCase(), ...rest].join("");
+};
 
 const mapStateToProps = ({ planet }) => ({ planet });
 
