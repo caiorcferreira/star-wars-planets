@@ -1,3 +1,4 @@
+export const FETCH_PLANET_BEGIN = "FETCH_PLANET_BEGIN";
 export const FETCH_PLANET_SUCCESS = "FETCH_PLANET_SUCCESS";
 
 const getRandomInt = (min, max) => {
@@ -10,6 +11,7 @@ export const fetchPlanet = () => {
   return async dispatch => {
     const randomId = getRandomInt(1, 61);
 
+    dispatch(fetchPlanetBegin());
     const json = await fetch(`https://swapi.co/api/planets/${randomId}`).then(
       response => response.json()
     );
@@ -30,4 +32,8 @@ export const fetchPlanet = () => {
 export const fetchPlanetSuccess = planet => ({
   type: FETCH_PLANET_SUCCESS,
   payload: { planet }
+});
+
+export const fetchPlanetBegin = () => ({
+  type: FETCH_PLANET_BEGIN
 });
