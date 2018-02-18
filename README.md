@@ -1,6 +1,6 @@
 # Star Wars Planets
 
-You can find the live application [here](https://caiorcferreira-starwarsplanets.herokuapp.com/)
+You can find the live application [here](https://caiorcferreira-starwarsplanets.herokuapp.com/). **Be aware that it's hosted on a Free Heroku Dyno and on the first access, or after a long period, it can render slower than normal.**
 
 ## Setup and Executation
 
